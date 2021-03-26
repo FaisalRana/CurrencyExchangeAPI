@@ -47,7 +47,7 @@ To setup:
 - Run $npm start to launch index.html from dist folder in a browser, lint the code and clean up the directory
 
 ## Github pages website
-https://faisalrana.github.io/Project5a/
+https://faisalrana.github.io/Project6/
 
 ## Copyright and license info
 

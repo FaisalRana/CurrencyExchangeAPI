@@ -6,6 +6,9 @@ import './css/styles.css';
 
 $(document).ready(function() {
   $('#submitExchange').click(function() {
-    alert("hello");
+    let money = $('input#inputMoney').val();
+    let currency = $('input#inputCurrency').val();
+    $('.showResult').append(`${money} ${currency}`);
+
   });
 });
