@@ -10,3 +10,7 @@ body {
 #toggleInput {
   display:none;
 }
+
+#button {
+  float:right;
+}
