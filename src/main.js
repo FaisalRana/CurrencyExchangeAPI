@@ -7,11 +7,19 @@ import ExchangeMoneyAPI from './currency-convert-service';
 async function exchangeMoney(money, currency) {
   const response = await ExchangeMoneyAPI.getMoney();
   const convertedRate = (response["conversion_rates"][currency]) * money;
-  printResponse(convertedRate);
+  if (isNaN(convertedRate)=== false) {
+    printResponse(convertedRate, money, currency);
+  } else {
+    printError(currency)
+  }
+  
+}
+function printError(currency) {
+  $('.showErrors').append(`Error: ${currency} is not a known currency in the database.`);
 }
 
-function printResponse(response) {
-  $('.showResult').append(`${response}`);
+function printResponse(response, money, currency) {
+  $('.showResult').append(`<li> $${money} is ${response} in ${currency}`);
 }
 
 $(document).ready(function() {
