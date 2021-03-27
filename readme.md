@@ -21,7 +21,7 @@ This is a website that will take a monetary amount and a currency and output the
 - Promises
 - Async Functions/Await
 
-## Tests
+## Initial Plan
 
 Jest was not used to create tests for this project.  However her was the initial plan:
 
@@ -43,7 +43,6 @@ To setup:
 - Install Dependencies using npm install
 - Create production environment with terminal command $ npm run build
 - Lint code with the command $ npm run lint
-- Run tests in Jest with the command $ npm test
 - Run $npm start to launch index.html from dist folder in a browser, lint the code and clean up the directory
 
 ## Github pages website
