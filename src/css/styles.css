@@ -6,3 +6,7 @@ body {
 .showErrors {
   color:red
 } 
+
+#toggleInput {
+  display:none;
+}

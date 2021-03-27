@@ -6,8 +6,10 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Welcome to the Rupee Exchange</h1>
-      <label for="inputMoney">Please Enter a monetary amount in USD:</label>
-      <input id="inputMoney" type="money" required><br>
+      <div id=toggleInput>
+        <label for="inputMoney">Please Enter a monetary amount in USD:</label>
+        <input id="inputMoney" type="number" required><br>
+      </div>
       <label for="currency">Choose a currency:</label>
       <select id="currency" required>
       <div id="currencyInput"></div>
