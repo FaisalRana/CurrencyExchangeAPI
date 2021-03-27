@@ -1,4 +1,4 @@
-# Project 5: Currency Exchange API
+# Project 6: Currency Exchange API
 By Faisal Rana
 
 ## Description of program
