@@ -6,20 +6,31 @@ import ExchangeMoneyAPI from './currency-convert-service';
 
 async function exchangeMoney(money, currency) {
   const response = await ExchangeMoneyAPI.getMoney();
-  const convertedRate = (response["conversion_rates"][currency]) * money;
-  if (isNaN(convertedRate)=== false) {
+  const convertedRate = parseFloat((response["conversion_rates"][currency]) * money).toFixed(2);
+  const keyList = Object.keys(response["conversion_rates"]);
+  if(convertedRate === "0.00") {
+    printG2g(keyList);
+  } else if(isNaN(convertedRate) === false) {
     printResponse(convertedRate, money, currency);
   } else {
-    printError(currency)
+    printError(currency);
   }
-  
-}
-function printError(currency) {
-  $('.showErrors').append(`Error: ${currency} is not a known currency in the database.`);
 }
 
+function printG2g(keyList) {
+  $('.showErrors').html(`Currencies locked and loaded`);
+  $("#currency").html(` `)
+  keyList.forEach(key => 
+    $("#currency").append(`<option value=${key}>${key}</option>`));
+}
+function printError(currency) {
+  $('.showErrors').html("");
+  $('.showErrors').append(`Error: ${currency} is not a known currency in the database.`);
+}
 function printResponse(response, money, currency) {
-  $('.showResult').append(`<li> $${money} is ${response} in ${currency}`);
+  $('.showErrors').text("");
+  $('.showResult').append(`<li> $${money} in USD is ${response} in ${currency}`);
+
 }
 
 $(document).ready(function() {
@@ -29,5 +40,4 @@ $(document).ready(function() {
     (exchangeMoney(money, currency));
     return money, currency;
   });
-  
 });

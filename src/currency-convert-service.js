@@ -5,9 +5,9 @@ export default class ExchangeMoneyAPI {
       if (!response.result === "success") {
         throw Error(response.result);
       }
-      return response.json()
+      return response.json();
     } catch(error) {
-      return error.message + ". Please Check Website Status";
+      return error.message + ". Please Check Website or Endpoint Status";
     }
   }
 }

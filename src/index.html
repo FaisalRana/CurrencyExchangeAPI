@@ -8,15 +8,11 @@
       <h1>Welcome to the Rupee Exchange</h1>
       <label for="inputMoney">Please Enter a monetary amount in USD:</label>
       <input id="inputMoney" type="money" required><br>
-      
       <label for="currency">Choose a currency:</label>
       <select id="currency" required>
-        <option value="PKR">Pakistani Rupees</option>
-        <option value="IDR">Indian Rupees</option>
-        <option value="INR">Indonesian Rupees</option>
-        <option value="IRR">Iranian Rupees</option>
-        <option value="NPR">Nepalese Rupee</option>
-        <option value="BAD">Bad Rupees</option>
+      <div id="currencyInput"></div>
+        <option id="temporary" value="PKR">Click Submit to get started</option>
+        <option id="temporary" value="BAD">BAD INPUT</option>
       </select>
       <button class="btn-success" id="submitExchange">Submit</button>
     </div>
