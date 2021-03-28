@@ -6,9 +6,10 @@ import ExchangeMoneyAPI from './currency-convert-service';
 
 async function exchangeMoney() {
   const response = await ExchangeMoneyAPI.getMoney();
-  getElements(response);
+  processResponse(response);
 }
-function getElements(response) {
+
+function processResponse(response) {
   let money = $('input#inputMoney').val();
   let currency = $('select#currency option:selected').val();
   if (response["conversion_rates"]) {
@@ -19,10 +20,11 @@ function getElements(response) {
     } else if(isNaN(convertedRate) === false) {
       printResponse(convertedRate, money, currency);
     } else {
-      printError(currency + " is not found in database.  Please select a currency from the drop down menu.");
+      printError(currency + " is not found in database.");
     }
   } else printError(response["error-type"]);
 } 
+
 function printG2g(keyList) {
   $('.showErrors').html(`Currencies initialized`);
   $('#currency').html(` `);
@@ -30,13 +32,15 @@ function printG2g(keyList) {
   keyList.forEach(key => 
     $("#currency").append(`<option value=${key}>${key}</option>`));
 }
+
 function printError(error) {
   $('.showErrors').html("");
   $('.showErrors').append(`Error: ${error}`);
 }
+
 function printResponse(response, money, currency) {
   $('.showErrors').text("");
-  $('.showResult').append(`<li> $${money} in USD is ${response} in ${currency}`);
+  $('.showResult').append(`<li> ${money} = ${response} ${currency}`);
 }
 
 $(document).ready(function() {

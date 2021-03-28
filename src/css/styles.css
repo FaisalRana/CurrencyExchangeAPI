@@ -1,15 +1,16 @@
 body {
   background-color: black;
-  color:rgb(0, 0, 0);
+  color:black;
   font-family: 'Arial Narrow Bold', sans-serif;
 }
 
 h1 {
   padding: 50px;
+  color:rgb(0, 0, 0);
   text-align: center;
 }
 .jumbotron {
-  background-color: rgb(193, 86, 4);
+  background-color: rgb(255, 179, 71)
 }
 
 .container {
@@ -29,10 +30,20 @@ h1 {
 
 #button {
   float:right;
-}
+} 
 label {
   margin-top:20px;
 }
 .btn-success {
   margin-left:20px;
+}
+
+#currency {
+  background-color: rgb(255, 179, 71);
+  color:rgb(195, 40, 151)
+}
+
+#currency option {
+  background-color:rgb(142, 63, 3);
+  color:lightgrey;
 }
