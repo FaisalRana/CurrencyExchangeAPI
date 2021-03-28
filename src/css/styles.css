@@ -1,11 +1,27 @@
 body {
   background-color: black;
-  color:rgb(11, 141, 222);
+  color:rgb(0, 0, 0);
+  font-family: 'Arial Narrow Bold', sans-serif;
 }
 
+h1 {
+  padding: 50px;
+  text-align: center;
+}
+.jumbotron {
+  background-color: rgb(193, 86, 4);
+}
+
+.container {
+  padding:30px;
+}
 .showErrors {
-  color:red
-} 
+  color:rgb(147, 136, 21);
+  font-family: 'Courier New', Courier, monospace;
+}
+.showResult {
+  color:rgb(47, 252, 255);
+}
 
 #toggleInput {
   display:none;
@@ -13,4 +29,10 @@ body {
 
 #button {
   float:right;
+}
+label {
+  margin-top:20px;
+}
+.btn-success {
+  margin-left:20px;
 }

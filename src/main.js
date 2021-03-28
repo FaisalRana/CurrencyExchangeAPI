@@ -6,9 +6,8 @@ import ExchangeMoneyAPI from './currency-convert-service';
 
 async function exchangeMoney() {
   const response = await ExchangeMoneyAPI.getMoney();
-  getElements(response)
+  getElements(response);
 }
- 
 function getElements(response) {
   let money = $('input#inputMoney').val();
   let currency = $('select#currency option:selected').val();
@@ -22,12 +21,11 @@ function getElements(response) {
     } else {
       printError(currency + " is not found in database.  Please select a currency from the drop down menu.");
     }
-  } else printError(response["error-type"])
+  } else printError(response["error-type"]);
 } 
-
 function printG2g(keyList) {
-  $('.showErrors').html(`Currencies locked and loaded`);
-  $('#currency').html(` `)
+  $('.showErrors').html(`Currencies initialized`);
+  $('#currency').html(` `);
   $('#toggleInput').show();
   keyList.forEach(key => 
     $("#currency").append(`<option value=${key}>${key}</option>`));
