@@ -44,7 +44,7 @@ To setup:
 - Navigate to the top level of the directory.
 - Visit the ExchangeRate-API site. Input your email address and aquire API KEY.
 - Place your token in an .env file at the top level of your directory.
-- Install Dependencies using npm install (Please see [Test Driven Development Setup Guide](https://www.learnhowtoprogram.com/intermediate-javascript-part-time-c-and-react-track/test-driven-development/test-driven-development-objectives). 
+- Install Dependencies using npm install (Please see [Test Driven Development Setup Guide](https://www.learnhowtoprogram.com/intermediate-javascript-part-time-c-and-react-track/test-driven-development/test-driven-development-objectives)). 
 - Run $npm start to launch index.html from dist folder in a browser, lint the code and clean up the directory.
 
 Additional Commands: 
